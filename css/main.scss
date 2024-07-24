@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&display=swap');
+
+// Color Variables
+$ffseasalt: #FAFAFA;
+$ffsilver: #B9BAB7;
+$ffmgreen: #347E7D;
+$ffgmetal: #263D41;
+$ffblack: #0A0A0A; 
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    //font-weight: 400;
+    font-style: normal;
+}
+
+.bg-gmetal {
+    background-color: $ffgmetal;
+    color: $ffseasalt;
+}
+
+.bg-mgreen {
+    background-color: $ffmgreen;
+    color: $ffseasalt;
+}
+
+.bg-silver {
+    background-color: $ffsilver;
+    color: $ffblack;
+}
+
+.bg-black {
+    background-color: $ffblack;
+    color: $ffseasalt;
+}
+
+.navbar {
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    .navbar-brand {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        .ff_logo {
+            position: relative;
+            height: 3rem;
+            width: auto;
+        }
+    }
+    .nav-link {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        color: $ffseasalt;
+        transition: color 0.3s ease;
+        &:hover {
+            color: $ffmgreen;
+        }
+    }
+    
+}
+
+.jumbotron {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba($ffblack, 0.6), rgba($ffblack, 0.6)) , url('../assets/images/conference_stock.jpg');
+    background-size: cover;
+    background-position: center;
+    color: $ffseasalt;
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    .cta-button {
+        background-color: $ffgmetal;
+        color: white;
+        border-radius: 0.5rem 0 0.5rem 0;
+        &:hover {
+            background-color: $ffmgreen;
+        }
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 8px rgba($ffblack, 0.2);
+    }
+    .card-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        //background-color: $ffmgreen;
+        border-radius: 5px 5px 0 0;
+        i {
+            font-size: 3rem;
+        }
+    }
+}
+
+.card-body {
+    flex: 1;
+}
+
+footer {
+    font-family: 'Questrial', sans-serif;
+    a {
+        text-decoration: none;
+        transition: color 0.3s;
+        &:hover {
+            color: #ddd;
+        }
+    }
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+    img {
+        width: 10rem;
+    }
+}
