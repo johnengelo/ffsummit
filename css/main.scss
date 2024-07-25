@@ -11,7 +11,7 @@ $ffblack: #0A0A0A;
 body {
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: "Questrial", sans-serif;
     //font-weight: 400;
     font-style: normal;
 }
@@ -33,6 +33,18 @@ body {
 
 .bg-black {
     background-color: $ffblack;
+    color: $ffseasalt;
+}
+
+.cl-black {
+    color: $ffblack;
+}
+
+.cl-mgreen {
+    color: $ffmgreen;
+}
+
+.cl-seasalt {
     color: $ffseasalt;
 }
 
@@ -78,11 +90,29 @@ body {
     font-style: normal;
     .cta-button {
         background-color: $ffgmetal;
-        color: white;
+        color: $ffseasalt;
         border-radius: 0.5rem 0 0.5rem 0;
         &:hover {
             background-color: $ffmgreen;
         }
+    }
+}
+
+.section-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.custom-button {
+    background-color: $ffmgreen; // Ensure the initial background color
+    color: $ffseasalt; // Ensure the initial text color
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease, color 0.3s ease; // Smooth transition for hover effects
+
+    &:hover {
+        background-color: darken($ffmgreen, 10%); // Darker shade for hover
+        color: $ffseasalt; // Ensure text color remains white
     }
 }
 
@@ -91,10 +121,10 @@ body {
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    &:hover {
+    /**&:hover {
         transform: translateY(-10px);
         box-shadow: 0 4px 8px rgba($ffblack, 0.2);
-    }
+    }**/
     .card-icon {
         display: flex;
         align-items: center;
@@ -112,13 +142,169 @@ body {
     flex: 1;
 }
 
+.circle {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: $ffseasalt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 2rem;
+    i {
+        color: $ffgmetal;
+    }
+}
+
+#tickets-pricing {
+    .card {
+        border-radius: 2rem 0.25rem 2rem 0.25rem;
+        &-header {
+            font-size: 1.2em;
+            padding: 20px;
+            border-radius: 2rem 0.25rem 0 0;
+        }
+        &-body {
+            padding: 20px;
+        }
+        &-footer {
+            padding: 15px;
+            border-radius: 0 0 2rem 0.25rem;
+        }
+        .ribbon {
+            width: 10rem;
+            height: 10rem;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+            span {
+                position: absolute;
+                display: block;
+                width: 200px;
+                padding: 10px 0;
+                background-color: salmon;
+                color: $ffseasalt;
+                text-align: center;
+                align-items: center;
+                font-weight: bold;
+                transform: rotate(45deg);
+                top: 20px;
+                right: -50px;
+                box-shadow: 0 3px 10px -5px rgba($ffblack, 1);
+            }
+        }
+        .list-unstyled {
+            li {
+                margin-bottom: 10px;
+                i {
+                    margin-right: 10px;
+                }
+            }
+        }
+        /**&:hover {
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+        }**/
+        .card-title {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .card-text {
+            font-size: 1em;
+        }
+    }
+}
+
+#testimonials-endorsements {
+    .testimonial-card {
+        border-radius: 10px;
+        transition: transform 0.3s;
+        &:hover {
+            transform: scale(1.05);
+        }
+        .card-body {
+            padding: 20px;
+            .testimonial-img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+            }
+            .card-title {
+                font-size: 1.2em;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+            .card-text {
+                font-size: 1em;
+                color: #555;
+            }
+        }
+    }
+}
+
+#testimonials-endorsements .container {
+    max-width: 960px;
+}
+
+#testimonials-endorsements h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#venue-information {
+    .map-responsive {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+        iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border: 0;
+        }
+    }
+
+    h2 {
+        font-size: 2.5em;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        font-size: 1.75em;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 1em;
+        //color: darken($color: $ffsilver, $amount: 25%);
+    }
+
+    .list-unstyled {
+        li {
+            margin-bottom: 10px;
+            i {
+                margin-right: 10px;
+                &.text-primary {
+                    color: $ffmgreen;
+                }
+            }
+        }
+    }
+}
+
 footer {
-    font-family: 'Questrial', sans-serif;
     a {
         text-decoration: none;
         transition: color 0.3s;
         &:hover {
-            color: #ddd;
+            color: $ffseasalt;
         }
     }
     ul {

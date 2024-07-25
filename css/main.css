@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Questrial", sans-serif;
   font-style: normal;
 }
 
@@ -24,6 +24,18 @@ body {
 
 .bg-black {
   background-color: #0A0A0A;
+  color: #FAFAFA;
+}
+
+.cl-black {
+  color: #0A0A0A;
+}
+
+.cl-mgreen {
+  color: #347E7D;
+}
+
+.cl-seasalt {
   color: #FAFAFA;
 }
 
@@ -69,21 +81,38 @@ body {
 }
 .jumbotron .cta-button {
   background-color: #263D41;
-  color: white;
+  color: #FAFAFA;
   border-radius: 0.5rem 0 0.5rem 0;
 }
 .jumbotron .cta-button:hover {
   background-color: #347E7D;
 }
 
+.section-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.custom-button {
+  background-color: #347E7D;
+  color: #FAFAFA;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.custom-button:hover {
+  background-color: #255a59;
+  color: #FAFAFA;
+}
+
 .card {
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 4px 8px rgba(10, 10, 10, 0.2);
+  /**&:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 8px rgba($ffblack, 0.2);
+  }**/
 }
 .card .card-icon {
   display: flex;
@@ -100,15 +129,155 @@ body {
   flex: 1;
 }
 
-footer {
-  font-family: "Questrial", sans-serif;
+.circle {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: #FAFAFA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 2rem;
 }
+.circle i {
+  color: #263D41;
+}
+
+#tickets-pricing .card {
+  border-radius: 2rem 0.25rem 2rem 0.25rem;
+  /**&:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease-in-out;
+  }**/
+}
+#tickets-pricing .card-header {
+  font-size: 1.2em;
+  padding: 20px;
+  border-radius: 2rem 0.25rem 0 0;
+}
+#tickets-pricing .card-body {
+  padding: 20px;
+}
+#tickets-pricing .card-footer {
+  padding: 15px;
+  border-radius: 0 0 2rem 0.25rem;
+}
+#tickets-pricing .card .ribbon {
+  width: 10rem;
+  height: 10rem;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#tickets-pricing .card .ribbon span {
+  position: absolute;
+  display: block;
+  width: 200px;
+  padding: 10px 0;
+  background-color: salmon;
+  color: #FAFAFA;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  transform: rotate(45deg);
+  top: 20px;
+  right: -50px;
+  box-shadow: 0 3px 10px -5px #0a0a0a;
+}
+#tickets-pricing .card .list-unstyled li {
+  margin-bottom: 10px;
+}
+#tickets-pricing .card .list-unstyled li i {
+  margin-right: 10px;
+}
+#tickets-pricing .card .card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+#tickets-pricing .card .card-text {
+  font-size: 1em;
+}
+
+#testimonials-endorsements .testimonial-card {
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+#testimonials-endorsements .testimonial-card:hover {
+  transform: scale(1.05);
+}
+#testimonials-endorsements .testimonial-card .card-body {
+  padding: 20px;
+}
+#testimonials-endorsements .testimonial-card .card-body .testimonial-img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#testimonials-endorsements .testimonial-card .card-body .card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+#testimonials-endorsements .testimonial-card .card-body .card-text {
+  font-size: 1em;
+  color: #555;
+}
+
+#testimonials-endorsements .container {
+  max-width: 960px;
+}
+
+#testimonials-endorsements h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+#venue-information .map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+#venue-information .map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border: 0;
+}
+#venue-information h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+#venue-information h3 {
+  font-size: 1.75em;
+  font-weight: bold;
+}
+#venue-information p {
+  font-size: 1em;
+}
+#venue-information .list-unstyled li {
+  margin-bottom: 10px;
+}
+#venue-information .list-unstyled li i {
+  margin-right: 10px;
+}
+#venue-information .list-unstyled li i.text-primary {
+  color: #347E7D;
+}
+
 footer a {
   text-decoration: none;
   transition: color 0.3s;
 }
 footer a:hover {
-  color: #ddd;
+  color: #FAFAFA;
 }
 footer ul {
   padding: 0;
