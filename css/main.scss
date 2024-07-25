@@ -54,7 +54,7 @@ body {
     width: 100%;
     z-index: 10;
     .navbar-brand {
-        font-family: "Poppins", sans-serif;
+        //font-family: "Poppins", sans-serif;
         font-weight: 700;
         font-style: normal;
         .ff_logo {
@@ -64,7 +64,7 @@ body {
         }
     }
     .nav-link {
-        font-family: "Poppins", sans-serif;
+        //font-family: "Poppins", sans-serif;
         font-weight: 500;
         font-style: normal;
         color: $ffseasalt;
@@ -73,7 +73,59 @@ body {
             color: $ffmgreen;
         }
     }
+    // Adds 'background-color' for the dropdown menu when it is open in smaller screens
+    @media (max-width: 991.98px) {
+        .navbar-collapse.show,
+        .navbar-collapse.collapsing {
+            background-color: rgba($ffblack, 0.8); // Adjust the background color as needed
+        }
+    }
     
+}
+
+// Full Screen Menu Styles
+.full-screen-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $ffblack;
+    color: $ffseasalt;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .menu-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .menu-list {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        li {
+            margin: 20px 0;
+            a {
+                color: $ffseasalt;
+                font-size: 2rem;
+                text-decoration: none;
+                &:hover {
+                    color: $ffmgreen;
+                }
+            }
+        }
+    }
+}
+
+.menu-toggle {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: $ffseasalt;
 }
 
 .jumbotron {
@@ -296,6 +348,40 @@ body {
                 }
             }
         }
+    }
+}
+
+#supporting-cause {
+    h2 {
+        font-size: 2.5em;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        font-size: 1.75em;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 1em;
+        color: #555;
+    }
+
+    .list-unstyled {
+        li {
+            margin-bottom: 10px;
+            i {
+                margin-right: 10px;
+                &.text-danger {
+                    color: #dc3545;
+                }
+            }
+        }
+    }
+
+    img {
+        border-radius: 10px;
     }
 }
 

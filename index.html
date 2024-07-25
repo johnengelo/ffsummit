@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link href="css/main.css" rel="stylesheet">
+    <!-- Custom JS-->
+    <script src="js/main.js"></script>
     <!-- Favicon -->
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/images/favicon/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon/apple-touch-icon-114x114.png" />
@@ -37,7 +39,7 @@
             <a class="navbar-brand" href="#">
                 <img class="ff_logo" src="assets/images/LOGO-Fully-Funded-Horizontal-white.png" alt="Fully Funded Logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" id="menu-toggle" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -64,6 +66,20 @@
             </div>
         </div>
     </nav>
+    
+    <div class="full-screen-menu" id="full-screen-menu">
+        <div class="menu-close" id="menu-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="menu-list">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">AGENDA</a></li>
+            <li><a href="#">SPEAKERS</a></li>
+            <li><a href="#">TICKETS</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </div>
 
     <!-- Main Content -->
     <main role="main">
@@ -361,7 +377,7 @@
                     <!-- Venue Details -->
                     <div class="col-lg-6 mb-4">
                         <h3 class="mb-3">The Tampa Club</h3>
-                        <p>101 E Kennedy Blvd #4200, Tampa, FL 33602, USA</p>
+                        <p>101 E Kennedy Blvd #4200, Tampa, FL 33602</p>
                         <p>The Tampa Club offers a sophisticated setting with stunning views of the city. It is the perfect venue for an intimate and exclusive summit.</p>
                         <ul class="list-unstyled">
                             <li><i class="fa-solid fa-check-circle cl-seasalt"></i> Easy access to transportation</li>
@@ -378,6 +394,29 @@
                 </div>
             </div>
         </section>
+        <!-- Supporting a Cause -->
+        <section id="supporting-cause" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Supporting a Cause</h2>
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <img src="assets/images/olive_branch_dog_rescue.jpg" alt="The Olive Branch Dog Rescue" class="img-fluid rounded">
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <h3 class="mb-3">The Olive Branch Dog Rescue</h3>
+                        <p>We are proud to announce that all profits from the Fully Funded Summit will be donated to The Olive Branch Dog Rescue, a cause that is very important to us.</p>
+                        <p>The Olive Branch Dog Rescue is dedicated to re-homing dogs from kill shelters, providing them with a second chance at life. Your participation in the summit will not only help you gain valuable insights and connections but also support this noble cause.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fa-solid fa-heart text-danger"></i>&nbsp; Rescuing dogs from kill shelters</li>
+                            <li><i class="fa-solid fa-heart text-danger"></i>&nbsp; Providing medical care and rehabilitation</li>
+                            <li><i class="fa-solid fa-heart text-danger"></i>&nbsp; Finding loving forever homes</li>
+                        </ul>
+                        <p>By attending the Fully Funded Summit, you are making a difference in the lives of these animals. Thank you for your support!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer Section -->
