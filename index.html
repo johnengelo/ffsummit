@@ -48,19 +48,19 @@
                         <a class="nav-link" aria-current="page" href="#">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ABOUT</a>
+                        <a class="nav-link" href="#about">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">AGENDA</a>
+                        <a class="nav-link" href="#agenda-highlights">AGENDA</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">SPEAKERS</a>
+                        <a class="nav-link" href="#speakers-panels">SPEAKERS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">TICKETS</a>
+                        <a class="nav-link" href="#tickets-pricing">TICKETS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CONTACT</a>
+                        <a class="nav-link" href="#contact">CONTACT</a>
                     </li>
                 </ul>
             </div>
@@ -83,7 +83,7 @@
 
     <!-- Main Content -->
     <main role="main">
-        <div id="hero" class="jumbotron jumbotron-fluid">
+        <div id="home" class="jumbotron jumbotron-fluid">
             <div class="container text-center text-white">
                 <h1 class="display-4">Join the Premier Event for Capital Raising Mastery!</h1>
                 <p class="lead">The Fully Funded Summit is your exclusive opportunity to level up your capital raising skills. Join us on November 7th and 8th in Tampa, Florida for two days of immersive learning, networking, and growth.</p>
@@ -489,18 +489,43 @@
                 </div>
             </div>
         </section>
-        <!-- Call to Action Section -->
-        <section id="cta" class="py-5 bg-gmetal text-light text-center">
+        <!-- Call to Action and Contact Section -->
+        <section id="contact" class="py-5 bg-gmetal text-light">
             <div class="container">
-                <h2 class="mb-4">Don't Miss Out on the Fully Funded Summit!</h2>
-                <p class="lead mb-4">Join industry leaders and fellow professionals to elevate your capital raising skills, network with like-minded individuals, and support a great cause.</p>
-                <!--<a href="#tickets-pricing" class="btn btn-lg btn-light">Get Your Tickets Now <i class="fa-solid fa-arrow-right"></i></a>-->
-                <a class="btn btn-lg cta-button" href="#tickets-pricing" role="button">Get Your Tickets Now! &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+                <div class="row">
+                    <!-- CTA Column -->
+                    <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0 px-5">
+                        <h2 class="mb-4">Don't Miss Out on the Fully Funded Summit! ✨</h2>
+                        <p class="lead mb-4">Join industry leaders and fellow professionals to elevate your capital raising skills, network with like-minded individuals, and support a great cause.</p>
+                        <a href="#tickets-pricing" class="btn btn-lg btn-light">Get Your Tickets Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Contact Form Column -->
+                    <div id="contact-form" class="col-lg-6 px-5">
+                        <h4 class="mb-4 text-center">Contact Us for More Information</h4>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control form-control-sm" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control form-control-sm" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control form-control-sm" id="message" rows="2" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-light">Send Message</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
-
     </main>
-
+    <!-- Scroll to Top Button -->
+    <a href="#" class="scroll-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
     <!-- Footer Section -->
     <footer class="bg-black text-light py-5">
         <div class="container">
@@ -513,7 +538,7 @@
                 <div class="col-lg-3 col-md-6 mb-3 text-center text-lg-start">
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#hero" class="text-light">Home</a>
+                            <a href="#" class="text-light">Home</a>
                         </li>
                         <li>
                             <a href="#about" class="text-light">About the Summit</a>
@@ -554,11 +579,21 @@
                 </div>
             </div>
             <div class="text-center mt-3">
+                <div class="social-icons mb-3">
+                    <a href="https://www.facebook.com" target="_blank" class="text-light me-2">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="text-light me-2">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.x.com" target="_blank" class="text-light">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                </div>
                 <p class="mb-0">© 2024 Fully Funded. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://kit.fontawesome.com/abbcb707ed.js" crossorigin="anonymous"></script>

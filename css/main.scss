@@ -425,37 +425,60 @@ body {
     }
 }
 
-#cta {
-    //background-color: $ffgmetal;
-    color: $ffseasalt;
-    padding: 60px 0;
-    text-align: center;
-
+#contact {
+    h2, h4 {
+        font-weight: bold;
+    }
     h2 {
         font-size: 2.5em;
-        font-weight: bold;
         margin-bottom: 20px;
     }
-
     p {
         font-size: 1.2em;
         margin-bottom: 30px;
     }
-
+    h4 {
+        margin-bottom: 30px;
+    }
     .btn {
         font-size: 1.2em;
         padding: 10px 30px;
+        width: 100%;
+        background-color: $ffmgreen;
+        color: $ffseasalt;
         border-radius: 0.5rem 0 0.5rem 0;
-        transition: all 0.3s ease;
-        background-color: $ffseasalt;
+        border: none;
         &:hover {
-            background-color: $ffmgreen;
+            background-color: $ffseasalt;
+            color: $ffblack;
         }
         i {
             margin-left: 10px;
         }
     }
+    #contact-form {
+        @media (max-width: 992px) {
+            margin-top: 2rem;
+        }
+    }
+    
+    .form-control {
+        margin-bottom: 20px;
+        padding: 10px;
+        border-radius: 0.25rem;
+        border: 1px solid $ffseasalt;
+    }
+
+    /**.btn-light {
+        background-color: $ffmgreen;
+        color: $ffseasalt;
+        &:hover {
+            background-color: $ffseasalt;
+            color: $ffblack;
+        }
+    }**/
 }
+
 
 footer {
     .container {
@@ -481,7 +504,6 @@ footer {
             width: 10rem;
         }
     }
-
     .row {
         .col-lg-3 {
             text-align: center;
@@ -493,6 +515,47 @@ footer {
 
         .col-md-6 {
             text-align: center;
+        }
+    }
+    .social-icons {
+        a {
+            font-size: 1.5em;
+            margin-right: 15px;
+            transition: color 0.3s;
+            &:hover {
+                color: $ffseasalt;
+            }
+        }
+    }
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: $ffmgreen;
+    color: $ffseasalt;
+    border-radius: 1rem 0 1rem 0;
+    border-color: $ffseasalt;
+    padding: 10px 15px;
+    text-align: center;
+    display: none; // Initially hidden
+    z-index: 1000;
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: $ffseasalt;
+        color: $ffmgreen;
+    }
+    i {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .scroll-to-top {
+        padding: 8px 12px;
+        i {
+            font-size: 1.2em;
         }
     }
 }

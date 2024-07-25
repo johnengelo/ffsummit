@@ -381,32 +381,56 @@ body {
   padding: 20px;
 }
 
-#cta {
-  color: #FAFAFA;
-  padding: 60px 0;
-  text-align: center;
+#contact {
+  /**.btn-light {
+      background-color: $ffmgreen;
+      color: $ffseasalt;
+      &:hover {
+          background-color: $ffseasalt;
+          color: $ffblack;
+      }
+  }**/
 }
-#cta h2 {
-  font-size: 2.5em;
+#contact h2, #contact h4 {
   font-weight: bold;
+}
+#contact h2 {
+  font-size: 2.5em;
   margin-bottom: 20px;
 }
-#cta p {
+#contact p {
   font-size: 1.2em;
   margin-bottom: 30px;
 }
-#cta .btn {
+#contact h4 {
+  margin-bottom: 30px;
+}
+#contact .btn {
   font-size: 1.2em;
   padding: 10px 30px;
-  border-radius: 0.5rem 0 0.5rem 0;
-  transition: all 0.3s ease;
-  background-color: #FAFAFA;
-}
-#cta .btn:hover {
+  width: 100%;
   background-color: #347E7D;
+  color: #FAFAFA;
+  border-radius: 0.5rem 0 0.5rem 0;
+  border: none;
 }
-#cta .btn i {
+#contact .btn:hover {
+  background-color: #FAFAFA;
+  color: #0A0A0A;
+}
+#contact .btn i {
   margin-left: 10px;
+}
+@media (max-width: 992px) {
+  #contact #contact-form {
+    margin-top: 2rem;
+  }
+}
+#contact .form-control {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 0.25rem;
+  border: 1px solid #FAFAFA;
 }
 
 footer .container a {
@@ -440,4 +464,43 @@ footer .row .col-lg-3 {
 }
 footer .row .col-md-6 {
   text-align: center;
+}
+footer .social-icons a {
+  font-size: 1.5em;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+footer .social-icons a:hover {
+  color: #FAFAFA;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #347E7D;
+  color: #FAFAFA;
+  border-radius: 1rem 0 1rem 0;
+  border-color: #FAFAFA;
+  padding: 10px 15px;
+  text-align: center;
+  display: none;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+.scroll-to-top:hover {
+  background-color: #FAFAFA;
+  color: #347E7D;
+}
+.scroll-to-top i {
+  font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+  .scroll-to-top {
+    padding: 8px 12px;
+  }
+  .scroll-to-top i {
+    font-size: 1.2em;
+  }
 }/*# sourceMappingURL=main.css.map */

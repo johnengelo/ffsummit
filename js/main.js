@@ -24,3 +24,24 @@ document.addEventListener('DOMContentLoaded', function() {
         fullScreenMenu.style.display = 'none';
     });
 });
+
+window.addEventListener('scroll', function() {
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+    const footer = document.querySelector('footer');
+    const footerRect = footer.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+
+    if (window.scrollY > 300 && footerRect.top > viewportHeight) {
+        scrollToTopButton.style.display = 'block';
+    } else {
+        scrollToTopButton.style.display = 'none';
+    }
+});
+
+document.querySelector('.scroll-to-top').addEventListener('click', function(event) {
+    event.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
