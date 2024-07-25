@@ -83,7 +83,7 @@
 
     <!-- Main Content -->
     <main role="main">
-        <div class="jumbotron jumbotron-fluid">
+        <div id="hero" class="jumbotron jumbotron-fluid">
             <div class="container text-center text-white">
                 <h1 class="display-4">Join the Premier Event for Capital Raising Mastery!</h1>
                 <p class="lead">The Fully Funded Summit is your exclusive opportunity to level up your capital raising skills. Join us on November 7th and 8th in Tampa, Florida for two days of immersive learning, networking, and growth.</p>
@@ -416,6 +416,88 @@
                 </div>
             </div>
         </section>
+        <!-- FAQ Section -->
+        <section id="faq" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+                <div class="accordion" id="faqAccordion">
+                    <!-- FAQ Item 1 -->
+                    <div class="accordion-item mb-3">
+                        <h6 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What is the Fully Funded Summit?
+                            </button>
+                        </h6>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The Fully Funded Summit is an exclusive event designed to help real estate investors, private equity investors, and fund managers level up their capital raising skills through networking, strategy sessions, and keynote presentations.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="accordion-item mb-3">
+                        <h6 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                When and where will the summit be held?
+                            </button>
+                        </h6>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The summit will be held on November 7th and 8th at The Tampa Club in Tampa, Florida.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="accordion-item mb-3">
+                        <h6 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                What are the ticket options and prices?
+                            </button>
+                        </h6>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We offer VIP tickets at a presale price of $900 (regularly $1,200) and General Admission tickets at a presale price of $600 (regularly $800). VIP tickets include a private dinner and separate networking event with Sam and other high-profile guests, in addition to all sessions and panels.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                    <div class="accordion-item mb-3">
+                        <h6 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                How can I support The Olive Branch Dog Rescue through the summit?
+                            </button>
+                        </h6>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                All profits from the Fully Funded Summit will be donated to The Olive Branch Dog Rescue, a charity dedicated to re-homing dogs from kill shelters. Your participation in the summit helps support this noble cause.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 5 -->
+                    <div class="accordion-item mb-3">
+                        <h6 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                How can I get a complimentary General Admission ticket?
+                            </button>
+                        </h6>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sign up for the Fully Funded Mastermind Community before presale ends to receive a complimentary General Admission ticket. This offer is available for a limited time, so be sure to take advantage of it!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Call to Action Section -->
+        <section id="cta" class="py-5 text-light text-center">
+            <div class="container">
+                <h2 class="mb-4">Don't Miss Out on the Fully Funded Summit!</h2>
+                <p class="lead mb-4">Join industry leaders and fellow professionals to elevate your capital raising skills, network with like-minded individuals, and support a great cause.</p>
+                <!--<a href="#tickets-pricing" class="btn btn-lg btn-light">Get Your Tickets Now <i class="fa-solid fa-arrow-right"></i></a>-->
+                <a class="btn btn-lg cta-button" href="#tickets-pricing" role="button">Get Your Tickets Now! &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
 
     </main>
 
@@ -424,17 +506,17 @@
         <div class="container">
             <div class="row">
                 <!-- Logo Section -->
-                <div class="col-lg-3 col-md-6 mb-3">
+                <div class="col-lg-3 col-md-6 mb-3 text-center text-lg-start">
                     <img src="assets/images/LOGO-Fully-Funded-Horizontal-white.png" alt="Fully Funded Summit Logo" class="img-fluid">
                 </div>
                 <!-- Links Section -->
-                <div class="col-lg-3 col-md-6 mb-3">
+                <div class="col-lg-3 col-md-6 mb-3 text-center text-lg-start">
                     <ul class="list-unstyled">
                         <li>
                             <a href="#hero" class="text-light">Home</a>
                         </li>
                         <li>
-                            <a href="#about-summit" class="text-light">About the Summit</a>
+                            <a href="#about" class="text-light">About the Summit</a>
                         </li>
                         <li>
                             <a href="#why-attend" class="text-light">Why Attend?</a>
@@ -447,7 +529,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-3">
+                <div class="col-lg-3 col-md-6 mb-3 text-center text-lg-start">
                     <ul class="list-unstyled">
                         <li>
                             <a href="#tickets-pricing" class="text-light">Tickets and Pricing</a>
@@ -464,9 +546,6 @@
                         <li>
                             <a href="#faq" class="text-light">FAQs</a>
                         </li>
-                        <li>
-                            <a href="#cta" class="text-light">Get Your Tickets Now</a>
-                        </li>
                     </ul>
                 </div>
                 <!-- Parent Website Link Section -->
@@ -479,6 +558,7 @@
             </div>
         </div>
     </footer>
+
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://kit.fontawesome.com/abbcb707ed.js" crossorigin="anonymous"></script>

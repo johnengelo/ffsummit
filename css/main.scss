@@ -266,6 +266,9 @@ body {
         .card-text {
             font-size: 1em;
         }
+        .btn {
+            border-radius: 0.5rem 0 0.5rem 0;
+        }
     }
 }
 
@@ -385,19 +388,111 @@ body {
     }
 }
 
-footer {
-    a {
-        text-decoration: none;
-        transition: color 0.3s;
-        &:hover {
-            color: $ffseasalt;
+#faq {
+    h2 {
+        font-size: 2.5em;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .accordion-item {
+        border: 1px solid $ffseasalt;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        .accordion-header {
+            button {
+                background-color: $ffseasalt;
+                font-size: 1.2em;
+                font-weight: bold;
+                color: $ffgmetal;
+                /**&::after {
+                    font-family: "Font Awesome 5 Free";
+                    content: "\f078";
+                    font-weight: 900;
+                    float: right;
+                    transition: transform 0.2s ease;
+                }**/
+                &[aria-expanded="true"]::after {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .accordion-body {
+            font-size: 1em;
+            color: $ffgmetal;
+            padding: 20px;
         }
     }
-    ul {
-        padding: 0;
-        list-style: none;
+}
+
+#cta {
+    background-color: $ffgmetal;
+    color: $ffseasalt;
+    padding: 60px 0;
+    text-align: center;
+
+    h2 {
+        font-size: 2.5em;
+        font-weight: bold;
+        margin-bottom: 20px;
     }
-    img {
-        width: 10rem;
+
+    p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        font-size: 1.2em;
+        padding: 10px 30px;
+        border-radius: 0.5rem 0 0.5rem 0;
+        transition: all 0.3s ease;
+        background-color: $ffseasalt;
+        &:hover {
+            background-color: $ffmgreen;
+        }
+        i {
+            margin-left: 10px;
+        }
+    }
+}
+
+footer {
+    .container {
+        a {
+            text-decoration: none;
+            transition: color 0.3s;
+            &:hover {
+                color: $ffseasalt;
+            }
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+            justify-content: center;
+            text-align: center;
+            
+            // Align to the left on larger screens
+            @media (min-width: 992px) {
+                text-align: left;
+            }
+        }
+        img {
+            width: 10rem;
+        }
+    }
+
+    .row {
+        .col-lg-3 {
+            text-align: center;
+            // Align to the left on larger screens
+            @media (min-width: 992px) {
+                text-align: left;
+            }
+        }
+
+        .col-md-6 {
+            text-align: center;
+        }
     }
 }

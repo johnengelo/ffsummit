@@ -247,6 +247,9 @@ body {
 #tickets-pricing .card .card-text {
   font-size: 1em;
 }
+#tickets-pricing .card .btn {
+  border-radius: 0.5rem 0 0.5rem 0;
+}
 
 #testimonials-endorsements .testimonial-card {
   border-radius: 10px;
@@ -346,17 +349,96 @@ body {
   border-radius: 10px;
 }
 
-footer a {
+#faq h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+#faq .accordion-item {
+  border: 1px solid #FAFAFA;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+#faq .accordion-item .accordion-header button {
+  background-color: #FAFAFA;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #263D41;
+  /**&::after {
+      font-family: "Font Awesome 5 Free";
+      content: "\f078";
+      font-weight: 900;
+      float: right;
+      transition: transform 0.2s ease;
+  }**/
+}
+#faq .accordion-item .accordion-header button[aria-expanded=true]::after {
+  transform: rotate(180deg);
+}
+#faq .accordion-item .accordion-body {
+  font-size: 1em;
+  color: #263D41;
+  padding: 20px;
+}
+
+#cta {
+  background-color: #263D41;
+  color: #FAFAFA;
+  padding: 60px 0;
+  text-align: center;
+}
+#cta h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#cta p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+#cta .btn {
+  font-size: 1.2em;
+  padding: 10px 30px;
+  border-radius: 0.5rem 0 0.5rem 0;
+  transition: all 0.3s ease;
+  background-color: #FAFAFA;
+}
+#cta .btn:hover {
+  background-color: #347E7D;
+}
+#cta .btn i {
+  margin-left: 10px;
+}
+
+footer .container a {
   text-decoration: none;
   transition: color 0.3s;
 }
-footer a:hover {
+footer .container a:hover {
   color: #FAFAFA;
 }
-footer ul {
+footer .container ul {
   padding: 0;
   list-style: none;
+  justify-content: center;
+  text-align: center;
 }
-footer img {
+@media (min-width: 992px) {
+  footer .container ul {
+    text-align: left;
+  }
+}
+footer .container img {
   width: 10rem;
+}
+footer .row .col-lg-3 {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  footer .row .col-lg-3 {
+    text-align: left;
+  }
+}
+footer .row .col-md-6 {
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
