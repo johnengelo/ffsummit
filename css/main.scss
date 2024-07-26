@@ -8,93 +8,93 @@ $ffmgreen: #347E7D;
 $ffgmetal: #263D41;
 $ffblack: #0A0A0A; 
 
+// Mixin for background and color
+@mixin bg-color($bg, $color) {
+    background-color: $bg;
+    color: $color;
+}
+
+// Mixin for transitions
+@mixin transition($property, $duration) {
+    transition: $property $duration ease;
+}
+
+// Font settings
+@mixin font-settings($font-family, $font-weight: 400, $font-style: normal) {
+    font-family: $font-family, sans-serif;
+    font-weight: $font-weight;
+    font-style: $font-style;
+}
+
+// Body styling
 body {
     margin: 0;
     padding: 0;
-    font-family: "Questrial", sans-serif;
-    //font-weight: 400;
-    font-style: normal;
+    @include font-settings("Questrial");
 }
 
-.bg-gmetal {
-    background-color: $ffgmetal;
-    color: $ffseasalt;
-}
+// Background and color classes
+.bg-gmetal { @include bg-color($ffgmetal, $ffseasalt); }
+.bg-mgreen { @include bg-color($ffmgreen, $ffseasalt); }
+.bg-silver { @include bg-color($ffsilver, $ffblack); }
+.bg-black { @include bg-color($ffblack, $ffseasalt); }
 
-.bg-mgreen {
-    background-color: $ffmgreen;
-    color: $ffseasalt;
-}
+// Color classes
+.cl-black { color: $ffblack; }
+.cl-mgreen { color: $ffmgreen; }
+.cl-seasalt { color: $ffseasalt; }
 
-.bg-silver {
-    background-color: $ffsilver;
-    color: $ffblack;
-}
-
-.bg-black {
-    background-color: $ffblack;
-    color: $ffseasalt;
-}
-
-.cl-black {
-    color: $ffblack;
-}
-
-.cl-mgreen {
-    color: $ffmgreen;
-}
-
-.cl-seasalt {
-    color: $ffseasalt;
-}
-
+// Navbar styling
 .navbar {
     background: transparent;
     position: absolute;
     width: 100%;
     z-index: 10;
+
     .navbar-brand {
-        //font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-style: normal;
+        @include font-settings("Poppins", 700);
+        
         .ff_logo {
             position: relative;
             height: 3rem;
             width: auto;
         }
     }
+
     .nav-link {
-        //font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: normal;
+        @include font-settings("Poppins", 500);
         color: $ffseasalt;
-        transition: color 0.3s ease;
+        @include transition(color, 0.3s);
+
         &:hover {
             color: $ffmgreen;
         }
     }
+
     .navbar-toggler {
         color: $ffseasalt;
         outline: none;
         box-shadow: none;
         border: none;
     }
-    // Adds 'background-color' for the dropdown menu when it is open in smaller screens
+
+    // Media query for mobile view
     @media (max-width: 991.98px) {
         padding: 2rem 2rem 0 2rem;
+        
         .navbar-collapse.show,
         .navbar-collapse.collapsing {
-            background-color: rgba($ffblack, 0.8); // Adjust the background color as needed
+            background-color: rgba($ffblack, 0.8);
         }
     }
-    
 }
 
+// No scroll class for disabling scroll
 .no-scroll {
     overflow: hidden;
 }
 
-// Full Screen Menu Styles
+// Full screen menu styling
 .full-screen-menu {
     display: none;
     position: fixed;
@@ -102,31 +102,34 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: $ffblack;
-    color: $ffseasalt;
+    @include bg-color($ffblack, $ffseasalt);
     z-index: 10;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
     .menu-close {
         position: absolute;
         top: 20px;
         right: 20px;
         font-size: 2rem;
-        //padding: 1.25rem 3rem 0 2rem;
         padding: 2rem 2rem 0 2rem;
         cursor: pointer;
     }
+
     .menu-list {
         list-style: none;
         padding: 0;
         text-align: center;
+
         li {
             margin: 20px 0;
+
             a {
                 color: $ffseasalt;
                 font-size: 2rem;
                 text-decoration: none;
+
                 &:hover {
                     color: $ffmgreen;
                 }
@@ -135,75 +138,75 @@ body {
     }
 }
 
+// Social icons styling
 .social-icons {
     a {
         font-size: 1.5em;
-        transition: color 0.3s;
+        @include transition(color, 0.3s);
         text-decoration: none;
     }
 }
 
+// Menu toggle styling
 .menu-toggle {
     cursor: pointer;
     font-size: 1.5rem;
     color: $ffseasalt;
 }
 
+// Jumbotron styling
 .jumbotron {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba($ffblack, 0.6), rgba($ffblack, 0.6)) , url('../assets/images/conference_stock.jpg');
+    background-image: linear-gradient(rgba($ffblack, 0.6), rgba($ffblack, 0.6)), url('../assets/images/conference_stock.jpg');
     background-size: cover;
     background-position: center;
-    color: $ffseasalt;
-    font-family: "Questrial", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    @include bg-color(none, $ffseasalt);
+    @include font-settings("Questrial");
+
     .cta-button {
-        background-color: $ffmgreen;
-        color: $ffseasalt;
+        @include bg-color($ffmgreen, $ffseasalt);
         border-radius: 0.75rem 0.25rem 0.75rem 0.25rem;
+
         &:hover {
-            background-color: darken($color: $ffmgreen, $amount: 10%);
+            background-color: darken($ffmgreen, 10%);
         }
     }
 }
 
+// Section title styling
 .section-title {
     font-size: 2.5em;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
+// Custom button styling
 .custom-button {
-    //background-color: $ffmgreen; 
-    //color: $ffseasalt; 
     border-radius: 0.75rem 0.25rem 0.75rem 0.25rem;
-    transition: background-color 0.3s ease, color 0.3s ease; // Smooth transition for hover effects
+    @include transition(background-color 0.3s, color 0.3s);
+
     &:hover {
-        background-color: darken($ffmgreen, 10%); // Darker shade for hover
-        color: $ffseasalt; // Ensure text color remains white
+        background-color: darken($ffmgreen, 10%);
+        color: $ffseasalt;
     }
 }
 
+// Card styling
 .card {
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    @include transition(transform 0.3s, box-shadow 0.3s);
 
-    /**&:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 4px 8px rgba($ffblack, 0.2);
-    }**/
     .card-icon {
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100px;
-        //background-color: $ffmgreen;
         border-radius: 5px 5px 0 0;
+
         i {
             font-size: 3rem;
         }
@@ -214,6 +217,7 @@ body {
     flex: 1;
 }
 
+// Circle styling
 .circle {
     width: 6.5rem;
     height: 6.5rem;
@@ -224,26 +228,32 @@ body {
     justify-content: center;
     margin: 0 auto;
     font-size: 2rem;
+
     i {
         color: $ffgmetal;
     }
 }
 
+// Tickets and pricing section styling
 #tickets-pricing {
     .card {
         border-radius: 2rem 0.25rem 2rem 0.25rem;
+
         &-header {
             font-size: 1.2em;
             padding: 20px;
             border-radius: 2rem 0.25rem 0 0;
         }
+
         &-body {
             padding: 20px;
         }
+
         &-footer {
             padding: 15px;
             border-radius: 0 0 2rem 0.25rem;
         }
+
         .ribbon {
             width: 10rem;
             height: 10rem;
@@ -251,6 +261,7 @@ body {
             position: absolute;
             top: 0;
             right: 0;
+
             span {
                 position: absolute;
                 display: block;
@@ -267,74 +278,83 @@ body {
                 box-shadow: 0 3px 10px -5px rgba($ffblack, 1);
             }
         }
+
         .list-unstyled {
             li {
                 margin-bottom: 10px;
+
                 i {
                     margin-right: 10px;
                 }
             }
         }
-        /**&:hover {
-            transform: scale(1.05);
-            transition: all 0.3s ease-in-out;
-        }**/
+
         .card-title {
             font-size: 1.5em;
             font-weight: bold;
         }
+
         .card-text {
             font-size: 1em;
         }
+
         .btn {
             border-radius: 0.75rem 0.25rem 0.75rem 0.25rem;
         }
     }
 }
 
+// Testimonials and endorsements section styling
 #testimonials-endorsements {
     .testimonial-card {
         border-radius: 10px;
-        transition: transform 0.3s;
+        @include transition(transform, 0.3s);
+
         &:hover {
             transform: scale(1.05);
         }
+
         .card-body {
             padding: 20px;
+
             .testimonial-img {
                 width: 100px;
                 height: 100px;
                 object-fit: cover;
             }
+
             .card-title {
                 font-size: 1.2em;
                 font-weight: bold;
                 margin-bottom: 15px;
             }
+
             .card-text {
                 font-size: 1em;
                 color: #555;
             }
         }
     }
+
+    .container {
+        max-width: 960px;
+    }
+
+    h2 {
+        font-size: 2.5em;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
 }
 
-#testimonials-endorsements .container {
-    max-width: 960px;
-}
-
-#testimonials-endorsements h2 {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
+// Venue information section styling
 #venue-information {
     .map-responsive {
         overflow: hidden;
         padding-bottom: 56.25%;
         position: relative;
         height: 0;
+
         iframe {
             left: 0;
             top: 0;
@@ -358,14 +378,15 @@ body {
 
     p {
         font-size: 1em;
-        //color: darken($color: $ffsilver, $amount: 25%);
     }
 
     .list-unstyled {
         li {
             margin-bottom: 10px;
+
             i {
                 margin-right: 10px;
+
                 &.text-primary {
                     color: $ffmgreen;
                 }
@@ -374,6 +395,7 @@ body {
     }
 }
 
+// Supporting cause section styling
 #supporting-cause {
     h2 {
         font-size: 2.5em;
@@ -391,11 +413,19 @@ body {
         color: #555;
     }
 
+    a {
+        color: $ffmgreen;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
     .list-unstyled {
         li {
             margin-bottom: 10px;
+
             i {
                 margin-right: 10px;
+
                 &.text-danger {
                     color: #dc3545;
                 }
@@ -410,16 +440,19 @@ body {
     }
 }
 
+// FAQ section styling
 #faq {
     h2 {
         font-size: 2.5em;
         font-weight: bold;
         margin-bottom: 30px;
     }
+
     .accordion-item {
         border: 1px solid $ffseasalt;
         border-radius: 5px;
         margin-bottom: 15px;
+
         .accordion-header {
             button {
                 background-color: $ffseasalt;
@@ -428,22 +461,18 @@ body {
                 color: $ffgmetal;
                 outline: none;
                 box-shadow: none;
-                /**&::after {
-                    font-family: "Font Awesome 5 Free";
-                    content: "\f078";
-                    font-weight: 900;
-                    float: right;
-                    transition: transform 0.2s ease;
-                }**/
+
                 &[aria-expanded="true"]::after {
                     transform: rotate(180deg);
                 }
             }
         }
+
         .accordion-body {
             font-size: 1em;
             color: $ffgmetal;
             padding: 20px;
+
             a {
                 color: $ffmgreen;
                 font-weight: bold;
@@ -453,81 +482,81 @@ body {
     }
 }
 
+// Contact section styling
 #contact {
     h2, h4 {
         font-weight: bold;
     }
+
     h2 {
         font-size: 2.5em;
         margin-bottom: 20px;
     }
+
     p {
         font-size: 1.2em;
         margin-bottom: 30px;
     }
+
     h4 {
         margin-bottom: 30px;
     }
+
     .btn {
         font-size: 1.2em;
         padding: 10px 30px;
         width: 100%;
-        background-color: $ffmgreen;
-        color: $ffseasalt;
+        @include bg-color($ffmgreen, $ffseasalt);
         border-radius: 0.5rem 0 0.5rem 0;
         border: none;
+
         &:hover {
             background-color: $ffseasalt;
             color: $ffblack;
         }
+
         i {
             margin-left: 10px;
         }
     }
+
     #contact-form {
         @media (max-width: 992px) {
             margin-top: 2rem;
         }
     }
-    
+
     .form-control {
         margin-bottom: 20px;
         padding: 10px;
         border-radius: 0.25rem;
         border: 1px solid $ffseasalt;
     }
-
-    /**.btn-light {
-        background-color: $ffmgreen;
-        color: $ffseasalt;
-        &:hover {
-            background-color: $ffseasalt;
-            color: $ffblack;
-        }
-    }**/
 }
 
-
+// Footer styling
 footer {
     .container {
         a {
             text-decoration: none;
-            transition: color 0.3s;
+            @include transition(color, 0.3s);
+
             &:hover {
                 color: $ffseasalt;
             }
         }
+
         ul {
             padding: 0;
             list-style: none;
             justify-content: center;
             text-align: center;
 
-            // Align to the left on larger screens
             @media (min-width: 992px) {
                 text-align: left;
             }
         }
+
         img {
             width: 10rem;
         }
@@ -536,17 +565,20 @@ footer {
     .row {
         .col-lg-3 {
             text-align: center;
-            // Align to the left on larger screens
+
             @media (min-width: 992px) {
                 text-align: left;
             }
         }
+
         .col-md-6 {
             text-align: center;
+
             @media (min-width: 768px) and (max-width: 991px) {
                 text-align: center;
                 display: flex;
                 justify-content: center;
+
                 ul {
                     display: flex;
                     flex-direction: column;
@@ -554,12 +586,14 @@ footer {
                 }
             }
         }
+
         .col-md-6,
         .col-lg-3 {
             @media (min-width: 768px) and (max-width: 991px) {
                 width: 100%;
                 max-width: none;
                 text-align: center;
+
                 ul {
                     text-align: center;
                 }
@@ -568,31 +602,32 @@ footer {
     }
 }
 
+// Scroll to top button styling
 .scroll-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: $ffmgreen;
-    color: $ffseasalt;
+    @include bg-color($ffmgreen, $ffseasalt);
     border-radius: 1rem 0.25rem 1rem 0.25rem;
     border-color: $ffseasalt;
     padding: 10px 15px;
     text-align: center;
-    display: none; // Initially hidden
+    display: none;
     z-index: 1000;
-    transition: all 0.3s ease;
+    @include transition(all, 0.3s);
+
     &:hover {
         background-color: $ffseasalt;
         color: $ffmgreen;
     }
+
     i {
         font-size: 1.5em;
     }
-}
 
-@media (max-width: 768px) {
-    .scroll-to-top {
+    @media (max-width: 768px) {
         padding: 8px 12px;
+
         i {
             font-size: 1.2em;
         }
