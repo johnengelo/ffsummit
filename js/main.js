@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const fullScreenMenu = document.getElementById('full-screen-menu');
     const scrollToTopButton = document.querySelector('.scroll-to-top');
     const footer = document.querySelector('footer');
+    const menuLinks = document.querySelectorAll('.full-screen-menu a');
 
     menuToggle.addEventListener('click', function() {
         fullScreenMenu.style.display = 'flex';
@@ -24,6 +25,16 @@ document.addEventListener('DOMContentLoaded', function() {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
+        });
+    });
+
+    menuLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            fullScreenMenu.style.display = 'none';
+            document.body.classList.remove('no-scroll');
+            menuToggle.classList.remove('collapsed');
+            checkScrollToTopButtonVisibility();
+            // Allow the link to navigate to the target section
         });
     });
 

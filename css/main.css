@@ -518,7 +518,7 @@ footer .row .col-md-6 {
   right: 20px;
   background-color: #347E7D;
   color: #FAFAFA;
-  border-radius: 1rem 0 1rem 0;
+  border-radius: 1rem 0.25rem 1rem 0.25rem;
   border-color: #FAFAFA;
   padding: 10px 15px;
   text-align: center;
