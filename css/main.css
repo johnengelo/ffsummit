@@ -294,7 +294,10 @@ body {
 }
 #testimonials-endorsements .testimonial-card .card-body .card-text {
   font-size: 1em;
-  color: #555;
+  color: #0A0A0A;
+  text-align: justify;
+  -moz-text-align-last: left;
+       text-align-last: left;
 }
 #testimonials-endorsements .container {
   max-width: 960px;

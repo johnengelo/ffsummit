@@ -336,7 +336,9 @@ body {
 
             .card-text {
                 font-size: 1em;
-                color: #555;
+                color: $ffblack;
+                text-align: justify;
+                text-align-last: left;
             }
         }
     }
