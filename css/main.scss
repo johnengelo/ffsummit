@@ -165,7 +165,12 @@ body {
     background-position: center;
     @include bg-color(none, $ffseasalt);
     @include font-settings("Questrial");
-
+    h1 {
+        font-size: 3.5em;
+        font-weight: bold;
+        color: $ffseasalt;
+        text-align: center;
+    }
     .cta-button {
         @include bg-color($ffmgreen, $ffseasalt);
         border-radius: 0.75rem 0.25rem 0.75rem 0.25rem;
