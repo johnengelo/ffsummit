@@ -416,7 +416,6 @@ body {
         font-weight: bold;
         margin-bottom: 30px;
     }
-
     .accordion-item {
         border: 1px solid $ffseasalt;
         border-radius: 5px;
@@ -427,6 +426,8 @@ body {
                 font-size: 1.2em;
                 font-weight: bold;
                 color: $ffgmetal;
+                outline: none;
+                box-shadow: none;
                 /**&::after {
                     font-family: "Font Awesome 5 Free";
                     content: "\f078";
@@ -443,6 +444,11 @@ body {
             font-size: 1em;
             color: $ffgmetal;
             padding: 20px;
+            a {
+                color: $ffmgreen;
+                font-weight: bold;
+                text-decoration: none;
+            }
         }
     }
 }

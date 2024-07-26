@@ -384,6 +384,8 @@ body {
   font-size: 1.2em;
   font-weight: bold;
   color: #263D41;
+  outline: none;
+  box-shadow: none;
   /**&::after {
       font-family: "Font Awesome 5 Free";
       content: "\f078";
@@ -399,6 +401,11 @@ body {
   font-size: 1em;
   color: #263D41;
   padding: 20px;
+}
+#faq .accordion-item .accordion-body a {
+  color: #347E7D;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 #contact {
