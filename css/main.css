@@ -102,6 +102,7 @@ body {
   top: 20px;
   right: 20px;
   font-size: 2rem;
+  padding: 2rem 2rem 0 2rem;
   cursor: pointer;
 }
 .full-screen-menu .menu-list {
