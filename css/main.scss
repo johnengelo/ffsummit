@@ -162,11 +162,11 @@ body {
     font-weight: 400;
     font-style: normal;
     .cta-button {
-        background-color: $ffgmetal;
+        background-color: $ffmgreen;
         color: $ffseasalt;
-        border-radius: 0.5rem 0 0.5rem 0;
+        border-radius: 0.75rem 0.25rem 0.75rem 0.25rem;
         &:hover {
-            background-color: $ffmgreen;
+            background-color: darken($color: $ffmgreen, $amount: 10%);
         }
     }
 }
@@ -178,11 +178,10 @@ body {
 }
 
 .custom-button {
-    background-color: $ffmgreen; // Ensure the initial background color
-    color: $ffseasalt; // Ensure the initial text color
-    border-radius: 0.25rem;
+    //background-color: $ffmgreen; 
+    //color: $ffseasalt; 
+    border-radius: 0.75rem 0.25rem 0.75rem 0.25rem;
     transition: background-color 0.3s ease, color 0.3s ease; // Smooth transition for hover effects
-
     &:hover {
         background-color: darken($ffmgreen, 10%); // Darker shade for hover
         color: $ffseasalt; // Ensure text color remains white
@@ -288,7 +287,7 @@ body {
             font-size: 1em;
         }
         .btn {
-            border-radius: 0.5rem 0 0.5rem 0;
+            border-radius: 0.75rem 0.25rem 0.75rem 0.25rem;
         }
     }
 }
