@@ -7,11 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menuToggle.addEventListener('click', function() {
         fullScreenMenu.style.display = 'flex';
+        document.body.classList.add('no-scroll');
         checkScrollToTopButtonVisibility();
     });
 
     menuClose.addEventListener('click', function() {
         fullScreenMenu.style.display = 'none';
+        document.body.classList.remove('no-scroll');
         checkScrollToTopButtonVisibility();
     });
 

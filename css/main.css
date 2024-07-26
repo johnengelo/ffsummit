@@ -79,6 +79,10 @@ body {
   }
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .full-screen-menu {
   display: none;
   position: fixed;
@@ -88,7 +92,7 @@ body {
   height: 100%;
   background-color: #0A0A0A;
   color: #FAFAFA;
-  z-index: 1000;
+  z-index: 10;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -119,11 +123,8 @@ body {
 
 .social-icons a {
   font-size: 1.5em;
-  margin-right: 15px;
   transition: color 0.3s;
-}
-.social-icons a:hover {
-  color: #FAFAFA;
+  text-decoration: none;
 }
 
 .menu-toggle {
@@ -196,9 +197,9 @@ body {
 }
 
 .circle {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 1.25rem 0.5rem 1.25rem 0.5rem;
   background-color: #FAFAFA;
   display: flex;
   align-items: center;
