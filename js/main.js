@@ -54,3 +54,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial check
     checkScrollToTopButtonVisibility();
 });
+
+function sendMail(event) {
+    event.preventDefault();
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+    
+    var mailtoLink = 'mailto:sam@fullyfundedcrc.com' +
+        '?subject=' + encodeURIComponent('Inquiry from ' + name) +
+        '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+    
+    window.location.href = mailtoLink;
+}
