@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const menuClose = document.getElementById('menu-close');
     const fullScreenMenu = document.getElementById('full-screen-menu');
@@ -6,13 +6,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const footer = document.querySelector('footer');
     const menuLinks = document.querySelectorAll('.full-screen-menu a');
 
-    menuToggle.addEventListener('click', function() {
+    const checkScrollToTopButtonVisibility = () => {
+        const footerRect = footer.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        const isFooterVisible = footerRect.top < viewportHeight && footerRect.bottom >= 0;
+        const isFullScreenMenuVisible = fullScreenMenu.style.display === 'flex';
+
+        scrollToTopButton.style.display = (window.scrollY > 300 && !isFooterVisible && !isFullScreenMenuVisible) ? 'block' : 'none';
+    };
+
+    menuToggle.addEventListener('click', () => {
         fullScreenMenu.style.display = 'flex';
         document.body.classList.add('no-scroll');
         checkScrollToTopButtonVisibility();
     });
 
-    menuClose.addEventListener('click', function() {
+    menuClose.addEventListener('click', () => {
         fullScreenMenu.style.display = 'none';
         document.body.classList.remove('no-scroll');
         checkScrollToTopButtonVisibility();
@@ -20,50 +29,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', checkScrollToTopButtonVisibility);
 
-    scrollToTopButton.addEventListener('click', function(event) {
+    scrollToTopButton.addEventListener('click', (event) => {
         event.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    menuLinks.forEach(function(link) {
-        link.addEventListener('click', function(event) {
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
             fullScreenMenu.style.display = 'none';
             document.body.classList.remove('no-scroll');
             menuToggle.classList.remove('collapsed');
             checkScrollToTopButtonVisibility();
-            // Allow the link to navigate to the target section
         });
     });
-
-    function checkScrollToTopButtonVisibility() {
-        const footerRect = footer.getBoundingClientRect();
-        const viewportHeight = window.innerHeight;
-        const isFooterVisible = footerRect.top < viewportHeight && footerRect.bottom >= 0;
-        const isFullScreenMenuVisible = fullScreenMenu.style.display === 'flex';
-
-        if (window.scrollY > 300 && !isFooterVisible && !isFullScreenMenuVisible) {
-            scrollToTopButton.style.display = 'block';
-        } else {
-            scrollToTopButton.style.display = 'none';
-        }
-    }
 
     // Initial check
     checkScrollToTopButtonVisibility();
 });
 
-function sendMail(event) {
+const sendMail = (event) => {
     event.preventDefault();
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-    
-    var mailtoLink = 'mailto:sam@fullyfundedcrc.com' +
-        '?subject=' + encodeURIComponent('Inquiry from ' + name) +
-        '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
-    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    const mailtoLink = `mailto:sam@fullyfundedcrc.com?subject=${encodeURIComponent('Inquiry from ' + name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+
     window.location.href = mailtoLink;
-}
+};
