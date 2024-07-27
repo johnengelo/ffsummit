@@ -224,9 +224,9 @@ body {
 
 // Circle styling
 .circle {
-    width: 6.5rem;
-    height: 6.5rem;
-    border-radius: 1.25rem 0.5rem 1.25rem 0.5rem;
+    width: 8.5rem;
+    height: 8.5rem;
+    border-radius: 2rem 0.75rem 2rem 0.75rem;
     background-color: $ffseasalt;
     display: flex;
     align-items: center;
@@ -237,7 +237,7 @@ body {
     img {
         width: 100%;
         height: auto;
-        border-radius: 1.25rem 0.5rem 1.25rem 0.5rem;
+        border-radius: 2rem 0.75rem 2rem 0.75rem;
         border: none;
     }
 
@@ -247,8 +247,12 @@ body {
 }
 
 #speakers-panels {
+    .speakers-row {
+        display: flex;
+        justify-content: center;
+    }
     .col-md-2 {
-        h5 {
+        h4 {
             font-weight: bold;
         }
         p {
